@@ -1,0 +1,12 @@
+C:\Users\neto_\Desktop\NETO PANIGASSI\Faculdade - UNIP   ADS\ADS - UNIP (3º SEMESTRE)\PIM\Projeto_Codigo\Software_Pim_3_Semestre\bin\Debug\Software_Pim_3_Semestre.exe.config
+C:\Users\neto_\Desktop\NETO PANIGASSI\Faculdade - UNIP   ADS\ADS - UNIP (3º SEMESTRE)\PIM\Projeto_Codigo\Software_Pim_3_Semestre\bin\Debug\Software_Pim_3_Semestre.exe
+C:\Users\neto_\Desktop\NETO PANIGASSI\Faculdade - UNIP   ADS\ADS - UNIP (3º SEMESTRE)\PIM\Projeto_Codigo\Software_Pim_3_Semestre\bin\Debug\Software_Pim_3_Semestre.pdb
+C:\Users\neto_\Desktop\NETO PANIGASSI\Faculdade - UNIP   ADS\ADS - UNIP (3º SEMESTRE)\PIM\Projeto_Codigo\Software_Pim_3_Semestre\obj\Debug\Software_Pim_3_Semestre.csprojAssemblyReference.cache
+C:\Users\neto_\Desktop\NETO PANIGASSI\Faculdade - UNIP   ADS\ADS - UNIP (3º SEMESTRE)\PIM\Projeto_Codigo\Software_Pim_3_Semestre\obj\Debug\Software_Pim_3_Semestre.Frm_Principal.resources
+C:\Users\neto_\Desktop\NETO PANIGASSI\Faculdade - UNIP   ADS\ADS - UNIP (3º SEMESTRE)\PIM\Projeto_Codigo\Software_Pim_3_Semestre\obj\Debug\Software_Pim_3_Semestre.Frm_Login.resources
+C:\Users\neto_\Desktop\NETO PANIGASSI\Faculdade - UNIP   ADS\ADS - UNIP (3º SEMESTRE)\PIM\Projeto_Codigo\Software_Pim_3_Semestre\obj\Debug\Software_Pim_3_Semestre.Properties.Resources.resources
+C:\Users\neto_\Desktop\NETO PANIGASSI\Faculdade - UNIP   ADS\ADS - UNIP (3º SEMESTRE)\PIM\Projeto_Codigo\Software_Pim_3_Semestre\obj\Debug\Software_Pim_3_Semestre.csproj.GenerateResource.cache
+C:\Users\neto_\Desktop\NETO PANIGASSI\Faculdade - UNIP   ADS\ADS - UNIP (3º SEMESTRE)\PIM\Projeto_Codigo\Software_Pim_3_Semestre\obj\Debug\Software_Pim_3_Semestre.csproj.CoreCompileInputs.cache
+C:\Users\neto_\Desktop\NETO PANIGASSI\Faculdade - UNIP   ADS\ADS - UNIP (3º SEMESTRE)\PIM\Projeto_Codigo\Software_Pim_3_Semestre\obj\Debug\Software_Pim_3_Semestre.exe
+C:\Users\neto_\Desktop\NETO PANIGASSI\Faculdade - UNIP   ADS\ADS - UNIP (3º SEMESTRE)\PIM\Projeto_Codigo\Software_Pim_3_Semestre\obj\Debug\Software_Pim_3_Semestre.pdb
+C:\Users\neto_\Desktop\NETO PANIGASSI\Faculdade - UNIP   ADS\ADS - UNIP (3º SEMESTRE)\PIM\Projeto_Codigo\Software_Pim_3_Semestre\obj\Debug\Software_Pim_3_Semestre.Frm_CadastroHospede.resources
