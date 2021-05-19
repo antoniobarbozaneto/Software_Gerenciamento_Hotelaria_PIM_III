@@ -39,41 +39,49 @@
             // 
             // txb_Usuario
             // 
-            this.txb_Usuario.Location = new System.Drawing.Point(93, 91);
+            this.txb_Usuario.Location = new System.Drawing.Point(82, 72);
             this.txb_Usuario.Name = "txb_Usuario";
-            this.txb_Usuario.Size = new System.Drawing.Size(100, 20);
+            this.txb_Usuario.Size = new System.Drawing.Size(127, 20);
             this.txb_Usuario.TabIndex = 0;
+            this.txb_Usuario.TextChanged += new System.EventHandler(this.txb_Usuario_TextChanged);
             // 
             // txb_Senha
             // 
-            this.txb_Senha.Location = new System.Drawing.Point(93, 117);
+            this.txb_Senha.Location = new System.Drawing.Point(82, 98);
             this.txb_Senha.Name = "txb_Senha";
-            this.txb_Senha.Size = new System.Drawing.Size(100, 20);
+            this.txb_Senha.PasswordChar = '*';
+            this.txb_Senha.Size = new System.Drawing.Size(127, 20);
             this.txb_Senha.TabIndex = 1;
+            this.txb_Senha.TextChanged += new System.EventHandler(this.txb_Senha_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 94);
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(16, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Usuário:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 120);
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(23, 99);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.Size = new System.Drawing.Size(53, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "Senha:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btn_Entrar
             // 
-            this.btn_Entrar.Location = new System.Drawing.Point(64, 143);
+            this.btn_Entrar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Entrar.Location = new System.Drawing.Point(58, 124);
             this.btn_Entrar.Name = "btn_Entrar";
-            this.btn_Entrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Entrar.Size = new System.Drawing.Size(82, 36);
             this.btn_Entrar.TabIndex = 4;
             this.btn_Entrar.Text = "ENTRAR";
             this.btn_Entrar.UseVisualStyleBackColor = true;
@@ -81,27 +89,31 @@
             // 
             // btn_Sair
             // 
-            this.btn_Sair.Location = new System.Drawing.Point(145, 143);
+            this.btn_Sair.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Sair.Location = new System.Drawing.Point(146, 124);
             this.btn_Sair.Name = "btn_Sair";
-            this.btn_Sair.Size = new System.Drawing.Size(75, 23);
+            this.btn_Sair.Size = new System.Drawing.Size(82, 36);
             this.btn_Sair.TabIndex = 5;
             this.btn_Sair.Text = "SAIR";
             this.btn_Sair.UseVisualStyleBackColor = true;
+            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 53);
+            this.label3.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(99, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 13);
+            this.label3.Size = new System.Drawing.Size(89, 30);
             this.label3.TabIndex = 6;
-            this.label3.Text = "[Aqui vai ficar logo da nossa empresa]";
+            this.label3.Text = "LOGIN";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(263, 189);
+            this.ClientSize = new System.Drawing.Size(249, 179);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_Sair);
             this.Controls.Add(this.btn_Entrar);
@@ -109,8 +121,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txb_Senha);
             this.Controls.Add(this.txb_Usuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Frm_Login";
-            this.Text = "Frm_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tela de Login";
             this.Load += new System.EventHandler(this.Frm_Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
