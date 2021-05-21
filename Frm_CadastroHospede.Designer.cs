@@ -65,7 +65,18 @@
             this.txb_Obs = new System.Windows.Forms.TextBox();
             this.maskedtxb_DtNasc = new System.Windows.Forms.MaskedTextBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbl_DtNascimento = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.btn_Editar = new System.Windows.Forms.Button();
+            this.btn_Excluir = new System.Windows.Forms.Button();
+            this.lbl_CpfPassaporte = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txb_Nome
@@ -217,11 +228,11 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(21, 307);
+            this.label15.Location = new System.Drawing.Point(26, 307);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(82, 16);
+            this.label15.Size = new System.Drawing.Size(77, 16);
             this.label15.TabIndex = 29;
-            this.label15.Text = "*Celular (1):";
+            this.label15.Text = "Celular (1):";
             // 
             // txb_Email
             // 
@@ -295,15 +306,15 @@
             this.maskedtxb_Rg.Mask = "00.000.000-0";
             this.maskedtxb_Rg.Name = "maskedtxb_Rg";
             this.maskedtxb_Rg.Size = new System.Drawing.Size(83, 20);
-            this.maskedtxb_Rg.TabIndex = 3;
+            this.maskedtxb_Rg.TabIndex = 2;
             // 
             // maskedtxb_Cpf
             // 
             this.maskedtxb_Cpf.Location = new System.Drawing.Point(109, 96);
-            this.maskedtxb_Cpf.Mask = "000.000.000-00";
+            this.maskedtxb_Cpf.Mask = "999.999.999-99";
             this.maskedtxb_Cpf.Name = "maskedtxb_Cpf";
             this.maskedtxb_Cpf.Size = new System.Drawing.Size(83, 20);
-            this.maskedtxb_Cpf.TabIndex = 4;
+            this.maskedtxb_Cpf.TabIndex = 3;
             // 
             // label17
             // 
@@ -348,7 +359,7 @@
             this.maskedtxb_Passaporte.Name = "maskedtxb_Passaporte";
             this.maskedtxb_Passaporte.ReadOnly = true;
             this.maskedtxb_Passaporte.Size = new System.Drawing.Size(83, 20);
-            this.maskedtxb_Passaporte.TabIndex = 5;
+            this.maskedtxb_Passaporte.TabIndex = 4;
             // 
             // groupBox1
             // 
@@ -399,7 +410,7 @@
             this.checkBox_Estrang.Location = new System.Drawing.Point(198, 123);
             this.checkBox_Estrang.Name = "checkBox_Estrang";
             this.checkBox_Estrang.Size = new System.Drawing.Size(99, 20);
-            this.checkBox_Estrang.TabIndex = 48;
+            this.checkBox_Estrang.TabIndex = 5;
             this.checkBox_Estrang.Text = "Estrangeiro";
             this.checkBox_Estrang.UseVisualStyleBackColor = true;
             this.checkBox_Estrang.CheckedChanged += new System.EventHandler(this.checkBox_Estrang_CheckedChanged);
@@ -428,7 +439,7 @@
             this.maskedtxb_DtNasc.Mask = "00/00/0000";
             this.maskedtxb_DtNasc.Name = "maskedtxb_DtNasc";
             this.maskedtxb_DtNasc.Size = new System.Drawing.Size(83, 20);
-            this.maskedtxb_DtNasc.TabIndex = 45;
+            this.maskedtxb_DtNasc.TabIndex = 1;
             this.maskedtxb_DtNasc.ValidatingType = typeof(System.DateTime);
             // 
             // label19
@@ -441,11 +452,118 @@
             this.label19.TabIndex = 46;
             this.label19.Text = "(* Campos obrigatórios)";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lbl_DtNascimento);
+            this.groupBox2.Controls.Add(this.label50);
+            this.groupBox2.Controls.Add(this.btn_Editar);
+            this.groupBox2.Controls.Add(this.btn_Excluir);
+            this.groupBox2.Controls.Add(this.lbl_CpfPassaporte);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.lblNome);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.groupBox2.Location = new System.Drawing.Point(399, 51);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(428, 90);
+            this.groupBox2.TabIndex = 47;
+            this.groupBox2.TabStop = false;
+            // 
+            // lbl_DtNascimento
+            // 
+            this.lbl_DtNascimento.AutoSize = true;
+            this.lbl_DtNascimento.Location = new System.Drawing.Point(131, 56);
+            this.lbl_DtNascimento.Name = "lbl_DtNascimento";
+            this.lbl_DtNascimento.Size = new System.Drawing.Size(20, 16);
+            this.lbl_DtNascimento.TabIndex = 54;
+            this.lbl_DtNascimento.Text = "...";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(6, 56);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(119, 16);
+            this.label50.TabIndex = 53;
+            this.label50.Text = "Data Nascimento:";
+            // 
+            // btn_Editar
+            // 
+            this.btn_Editar.Enabled = false;
+            this.btn_Editar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Editar.Location = new System.Drawing.Point(333, 13);
+            this.btn_Editar.Name = "btn_Editar";
+            this.btn_Editar.Size = new System.Drawing.Size(89, 30);
+            this.btn_Editar.TabIndex = 52;
+            this.btn_Editar.Text = "Editar";
+            this.btn_Editar.UseVisualStyleBackColor = true;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
+            // 
+            // btn_Excluir
+            // 
+            this.btn_Excluir.Enabled = false;
+            this.btn_Excluir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Excluir.Location = new System.Drawing.Point(333, 51);
+            this.btn_Excluir.Name = "btn_Excluir";
+            this.btn_Excluir.Size = new System.Drawing.Size(89, 30);
+            this.btn_Excluir.TabIndex = 49;
+            this.btn_Excluir.Text = "Deletar";
+            this.btn_Excluir.UseVisualStyleBackColor = true;
+            this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
+            // 
+            // lbl_CpfPassaporte
+            // 
+            this.lbl_CpfPassaporte.AutoSize = true;
+            this.lbl_CpfPassaporte.Location = new System.Drawing.Point(131, 40);
+            this.lbl_CpfPassaporte.Name = "lbl_CpfPassaporte";
+            this.lbl_CpfPassaporte.Size = new System.Drawing.Size(20, 16);
+            this.lbl_CpfPassaporte.TabIndex = 51;
+            this.lbl_CpfPassaporte.Text = "...";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(18, 40);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(107, 16);
+            this.label12.TabIndex = 50;
+            this.label12.Text = "Cpf/Passaporte:";
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(131, 24);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(20, 16);
+            this.lblNome.TabIndex = 49;
+            this.lblNome.Text = "...";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(76, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 16);
+            this.label11.TabIndex = 48;
+            this.label11.Text = "Nome:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(529, 23);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(189, 19);
+            this.label14.TabIndex = 48;
+            this.label14.Text = "Hóspedes Cadastrados";
+            // 
             // Frm_CadastroHospede
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 640);
+            this.ClientSize = new System.Drawing.Size(839, 640);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label17);
@@ -457,6 +575,8 @@
             this.Load += new System.EventHandler(this.Frm_CadastroHospede_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,5 +620,15 @@
         public System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.MaskedTextBox maskedtxb_DtNasc;
         public System.Windows.Forms.TextBox txb_Obs;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lbl_CpfPassaporte;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btn_Excluir;
+        private System.Windows.Forms.Button btn_Editar;
+        private System.Windows.Forms.Label lbl_DtNascimento;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label14;
     }
 }

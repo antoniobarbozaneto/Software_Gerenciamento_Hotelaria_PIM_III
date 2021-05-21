@@ -24,7 +24,6 @@ namespace Software_Pim_3_Semestre
 
         private void btn_Editar_Click(object sender, EventArgs e)
         {
-            frm_CadastroHospede.txb_Nome.Text = Hp.Nome; //Preciso pegar o valolr do atr do Obj Hp
             frm_CadastroHospede.ShowDialog();
 
         }

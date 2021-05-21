@@ -19,6 +19,8 @@ namespace Software_Pim_3_Semestre
         Frm_ConsultaReserva frm_ConsultaReserva;
         Frm_ConsultaQuarto frm_ConsultaQuarto;
         Frm_CadastroUsuario frm_CadastroUsuario;
+        Frm_ConsultaPagamento frm_ConsultaPagamento;
+        Frm_CadastroTipoQuarto frm_CadastroTipoQuarto;
         public Frm_Principal()
         {
             frm_CadastroHospede = new Frm_CadastroHospede();
@@ -28,6 +30,9 @@ namespace Software_Pim_3_Semestre
             frm_ConsultaReserva = new Frm_ConsultaReserva();
             frm_ConsultaQuarto = new Frm_ConsultaQuarto();
             frm_CadastroUsuario = new Frm_CadastroUsuario();
+            frm_ConsultaPagamento = new Frm_ConsultaPagamento();
+            frm_CadastroTipoQuarto = new Frm_CadastroTipoQuarto();
+
 
             InitializeComponent();
         }
@@ -83,6 +88,16 @@ namespace Software_Pim_3_Semestre
         private void consultaToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             frm_ConsultaReserva.ShowDialog();
+        }
+
+        private void consultaToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            frm_ConsultaPagamento.ShowDialog();
+        }
+
+        private void cadastroNovoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_CadastroTipoQuarto.ShowDialog();
         }
     }
 }

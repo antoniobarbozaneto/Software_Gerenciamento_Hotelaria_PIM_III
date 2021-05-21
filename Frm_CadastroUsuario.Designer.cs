@@ -74,7 +74,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(45, 51);
+            this.label2.Location = new System.Drawing.Point(37, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 16);
             this.label2.TabIndex = 54;
@@ -84,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(38, 25);
+            this.label1.Location = new System.Drawing.Point(30, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 53;
@@ -92,7 +92,7 @@
             // 
             // txb_Senha
             // 
-            this.txb_Senha.Location = new System.Drawing.Point(104, 50);
+            this.txb_Senha.Location = new System.Drawing.Point(96, 45);
             this.txb_Senha.Name = "txb_Senha";
             this.txb_Senha.PasswordChar = '*';
             this.txb_Senha.Size = new System.Drawing.Size(127, 20);
@@ -100,7 +100,7 @@
             // 
             // txb_Usuario
             // 
-            this.txb_Usuario.Location = new System.Drawing.Point(104, 24);
+            this.txb_Usuario.Location = new System.Drawing.Point(96, 19);
             this.txb_Usuario.Name = "txb_Usuario";
             this.txb_Usuario.Size = new System.Drawing.Size(127, 20);
             this.txb_Usuario.TabIndex = 51;

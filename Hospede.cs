@@ -8,11 +8,16 @@ namespace Software_Pim_3_Semestre
 {
     class Hospede
     {
-        public string Nome { get; set; }
+        //public string Nome { get; set; }
+        private static string nome;        
         public string Dt_Nasc { get; set; }
         public string Rg { get; set; }
-        public string Cpf { get; set; }
-        public string Passaporte { get; set; }
+
+        //public string Cpf { get; set; }
+        private static string cpf;
+
+        //public string Passaporte { get; set; }
+        private static string passaporte;
         public string Rua { get; set; }
         public string Num { get; set; }
         public string Bairro { get; set; }
@@ -26,11 +31,24 @@ namespace Software_Pim_3_Semestre
 
         public Hospede()
         {
-
+        }
+        public string Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+        public string Cpf
+        {
+            get { return cpf; }
+            set { cpf = value; }
+        }
+        public string Passaporte
+        {
+            get { return passaporte; }
+            set { passaporte = value; }
         }
 
-
-        public void Cadastro(string Nome, string Dt_Nasc, string Rg, string Cpf, string Passaporte, string Rua, string Num, string Bairro, string Cidade, string Cep, string Telefone, string Celular_Um, string Celular_Dois, string Email, string Obs)
+        public void Incluir(string Nome, string Dt_Nasc, string Rg, string Cpf, string Passaporte, string Rua, string Num, string Bairro, string Cidade, string Cep, string Telefone, string Celular_Um, string Celular_Dois, string Email, string Obs)
         {
             this.Nome = Nome;
             this.Dt_Nasc = Dt_Nasc;
@@ -49,7 +67,7 @@ namespace Software_Pim_3_Semestre
             this.Obs = Obs;
         }
 
-        public void Excluir()
+        public void Excluir() // Mtd Exclui Dados do Obj.
         {
             this.Nome = "";
             this.Dt_Nasc = "";
@@ -67,5 +85,25 @@ namespace Software_Pim_3_Semestre
             this.Email = "";
             this.Obs = "";
         }
+
+        public void Editar()
+        {
+            this.Nome = Nome;
+            this.Dt_Nasc = Dt_Nasc;
+            this.Rg = Rg;
+            this.Cpf = Cpf;
+            this.Passaporte = Passaporte;
+            this.Rua = Rua;
+            this.Num = Num;
+            this.Bairro = Bairro;
+            this.Cidade = Cidade;
+            this.Cep = Cep;
+            this.Telefone = Telefone;
+            this.Celular_Um = Celular_Um;
+            this.Celular_Dois = Celular_Dois;
+            this.Email = Email;
+            this.Obs = Obs;
+        }
+
     }
 }
