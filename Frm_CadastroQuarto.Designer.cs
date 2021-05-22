@@ -42,9 +42,20 @@
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbx_Tipo = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl_Tipo = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.btn_Editar = new System.Windows.Forms.Button();
+            this.btn_Deletar = new System.Windows.Forms.Button();
+            this.lbl_Andar = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lbl_Numero = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txb_Andar
@@ -68,7 +79,7 @@
             this.txb_ValorDiaria.Name = "txb_ValorDiaria";
             this.txb_ValorDiaria.ReadOnly = true;
             this.txb_ValorDiaria.Size = new System.Drawing.Size(100, 20);
-            this.txb_ValorDiaria.TabIndex = 5;
+            this.txb_ValorDiaria.TabIndex = 4;
             // 
             // label1
             // 
@@ -123,9 +134,10 @@
             this.btn_Sair.Location = new System.Drawing.Point(167, 166);
             this.btn_Sair.Name = "btn_Sair";
             this.btn_Sair.Size = new System.Drawing.Size(89, 33);
-            this.btn_Sair.TabIndex = 10;
+            this.btn_Sair.TabIndex = 6;
             this.btn_Sair.Text = "SAIR";
             this.btn_Sair.UseVisualStyleBackColor = true;
+            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
             // 
             // btn_Limpar
             // 
@@ -133,9 +145,10 @@
             this.btn_Limpar.Location = new System.Drawing.Point(262, 166);
             this.btn_Limpar.Name = "btn_Limpar";
             this.btn_Limpar.Size = new System.Drawing.Size(89, 33);
-            this.btn_Limpar.TabIndex = 11;
+            this.btn_Limpar.TabIndex = 7;
             this.btn_Limpar.Text = "LIMPAR";
             this.btn_Limpar.UseVisualStyleBackColor = true;
+            this.btn_Limpar.Click += new System.EventHandler(this.btn_Limpar_Click);
             // 
             // btn_Gravar
             // 
@@ -143,9 +156,10 @@
             this.btn_Gravar.Location = new System.Drawing.Point(72, 166);
             this.btn_Gravar.Name = "btn_Gravar";
             this.btn_Gravar.Size = new System.Drawing.Size(89, 33);
-            this.btn_Gravar.TabIndex = 9;
+            this.btn_Gravar.TabIndex = 5;
             this.btn_Gravar.Text = "GRAVAR";
             this.btn_Gravar.UseVisualStyleBackColor = true;
+            this.btn_Gravar.Click += new System.EventHandler(this.btn_Gravar_Click);
             // 
             // label17
             // 
@@ -160,7 +174,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cbx_Tipo);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.txb_Andar);
             this.groupBox2.Controls.Add(this.btn_Sair);
@@ -188,17 +202,13 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "*Tipo de Quarto já existente:";
             // 
-            // comboBox1
+            // cbx_Tipo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Comum",
-            "Presidencial",
-            "Master"});
-            this.comboBox1.Location = new System.Drawing.Point(225, 76);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 16;
+            this.cbx_Tipo.FormattingEnabled = true;
+            this.cbx_Tipo.Location = new System.Drawing.Point(225, 76);
+            this.cbx_Tipo.Name = "cbx_Tipo";
+            this.cbx_Tipo.Size = new System.Drawing.Size(100, 21);
+            this.cbx_Tipo.TabIndex = 16;
             // 
             // label19
             // 
@@ -210,11 +220,118 @@
             this.label19.TabIndex = 47;
             this.label19.Text = "(* Campos obrigatórios)";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(575, 26);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(172, 19);
+            this.label14.TabIndex = 50;
+            this.label14.Text = "Quartos Cadastrados";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lbl_Tipo);
+            this.groupBox1.Controls.Add(this.label50);
+            this.groupBox1.Controls.Add(this.btn_Editar);
+            this.groupBox1.Controls.Add(this.btn_Deletar);
+            this.groupBox1.Controls.Add(this.lbl_Andar);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.lbl_Numero);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(444, 52);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(377, 90);
+            this.groupBox1.TabIndex = 49;
+            this.groupBox1.TabStop = false;
+            // 
+            // lbl_Tipo
+            // 
+            this.lbl_Tipo.AutoSize = true;
+            this.lbl_Tipo.Location = new System.Drawing.Point(131, 56);
+            this.lbl_Tipo.Name = "lbl_Tipo";
+            this.lbl_Tipo.Size = new System.Drawing.Size(20, 16);
+            this.lbl_Tipo.TabIndex = 54;
+            this.lbl_Tipo.Text = "...";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(85, 56);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(40, 16);
+            this.label50.TabIndex = 53;
+            this.label50.Text = "Tipo:";
+            // 
+            // btn_Editar
+            // 
+            this.btn_Editar.Enabled = false;
+            this.btn_Editar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Editar.Location = new System.Drawing.Point(282, 15);
+            this.btn_Editar.Name = "btn_Editar";
+            this.btn_Editar.Size = new System.Drawing.Size(89, 30);
+            this.btn_Editar.TabIndex = 52;
+            this.btn_Editar.Text = "Editar";
+            this.btn_Editar.UseVisualStyleBackColor = true;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
+            // 
+            // btn_Deletar
+            // 
+            this.btn_Deletar.Enabled = false;
+            this.btn_Deletar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Deletar.Location = new System.Drawing.Point(282, 49);
+            this.btn_Deletar.Name = "btn_Deletar";
+            this.btn_Deletar.Size = new System.Drawing.Size(89, 30);
+            this.btn_Deletar.TabIndex = 49;
+            this.btn_Deletar.Text = "Deletar";
+            this.btn_Deletar.UseVisualStyleBackColor = true;
+            this.btn_Deletar.Click += new System.EventHandler(this.btn_Deletar_Click);
+            // 
+            // lbl_Andar
+            // 
+            this.lbl_Andar.AutoSize = true;
+            this.lbl_Andar.Location = new System.Drawing.Point(131, 40);
+            this.lbl_Andar.Name = "lbl_Andar";
+            this.lbl_Andar.Size = new System.Drawing.Size(20, 16);
+            this.lbl_Andar.TabIndex = 51;
+            this.lbl_Andar.Text = "...";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(75, 40);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(50, 16);
+            this.label12.TabIndex = 50;
+            this.label12.Text = "Andar:";
+            // 
+            // lbl_Numero
+            // 
+            this.lbl_Numero.AutoSize = true;
+            this.lbl_Numero.Location = new System.Drawing.Point(131, 24);
+            this.lbl_Numero.Name = "lbl_Numero";
+            this.lbl_Numero.Size = new System.Drawing.Size(20, 16);
+            this.lbl_Numero.TabIndex = 49;
+            this.lbl_Numero.Text = "...";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(63, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(62, 16);
+            this.label11.TabIndex = 48;
+            this.label11.Text = "Número:";
+            // 
             // Frm_CadastroQuarto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 298);
+            this.ClientSize = new System.Drawing.Size(832, 298);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label17);
@@ -223,8 +340,11 @@
             this.Name = "Frm_CadastroQuarto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Quarto";
+            this.Load += new System.EventHandler(this.Frm_CadastroQuarto_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,7 +366,17 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbx_Tipo;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lbl_Tipo;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Button btn_Editar;
+        private System.Windows.Forms.Button btn_Deletar;
+        private System.Windows.Forms.Label lbl_Andar;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbl_Numero;
+        private System.Windows.Forms.Label label11;
     }
 }
