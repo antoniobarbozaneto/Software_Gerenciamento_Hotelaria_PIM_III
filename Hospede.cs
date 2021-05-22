@@ -86,7 +86,7 @@ namespace Software_Pim_3_Semestre
             this.Obs = "";
         }
 
-        public void Editar()
+        public void Editar(string Nome, string Dt_Nasc, string Rg, string Cpf, string Passaporte, string Rua, string Num, string Bairro, string Cidade, string Cep, string Telefone, string Celular_Um, string Celular_Dois, string Email, string Obs)
         {
             this.Nome = Nome;
             this.Dt_Nasc = Dt_Nasc;

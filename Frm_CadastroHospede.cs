@@ -18,43 +18,26 @@ namespace Software_Pim_3_Semestre
         {
             InitializeComponent();
         }
-        
+
         private void btn_Gravar_Click(object sender, EventArgs e)
         {
             if (IsEdit == true)
             {
-                Hp.Editar();
+                Hp.Editar(txb_Nome.Text, maskedtxb_DtNasc.Text, maskedtxb_Rg.Text, maskedtxb_Cpf.Text, maskedtxb_Passaporte.Text, txb_Rua.Text, txb_Numero.Text, txb_Bairro.Text, txb_Cidade.Text, maskedtxb_Cep.Text, maskedtxb_Telefone.Text, maskedtxb_CelularUm.Text, maskedtxb_CelularDois.Text, txb_Email.Text, txb_Obs.Text);
+                VerificaNull();
+                //MessageBox.Show("Edição", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                Hp.Incluir(txb_Nome.Text, maskedtxb_DtNasc.Text, maskedtxb_Rg.Text, maskedtxb_Cpf.Text, maskedtxb_Passaporte.Text, txb_Rua.Text, txb_Numero.Text, txb_Bairro.Text, txb_Cidade.Text, maskedtxb_Cep.Text, maskedtxb_Telefone.Text, maskedtxb_CelularUm.Text, maskedtxb_CelularDois.Text, txb_Email.Text, txb_Obs.Text);
-
-                if (maskedtxb_Passaporte.MaskCompleted && txb_Nome.Text != null && maskedtxb_DtNasc.MaskCompleted)
+                if (lbl_CpfPassaporte.Text == "...")
                 {
-                    lblNome.Text = Hp.Nome;
-                    lbl_CpfPassaporte.Text = Hp.Passaporte;
-                    lbl_DtNascimento.Text = Hp.Dt_Nasc;
-                    LimparCampos();
-                    MessageBox.Show("Hóspede cadastrado com sucesso!!!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    btn_Editar.Enabled = true;
-                    btn_Excluir.Enabled = true;
+                    Hp.Incluir(txb_Nome.Text, maskedtxb_DtNasc.Text, maskedtxb_Rg.Text, maskedtxb_Cpf.Text, maskedtxb_Passaporte.Text, txb_Rua.Text, txb_Numero.Text, txb_Bairro.Text, txb_Cidade.Text, maskedtxb_Cep.Text, maskedtxb_Telefone.Text, maskedtxb_CelularUm.Text, maskedtxb_CelularDois.Text, txb_Email.Text, txb_Obs.Text);
+
+                    VerificaNull();
                 }
                 else
                 {
-                    if (maskedtxb_Cpf.MaskCompleted && txb_Nome.Text != null && maskedtxb_DtNasc.MaskCompleted)
-                    {
-                        lblNome.Text = Hp.Nome;
-                        lbl_CpfPassaporte.Text = Hp.Cpf;
-                        lbl_DtNascimento.Text = Hp.Dt_Nasc;
-                        LimparCampos();
-                        MessageBox.Show("Hóspede cadastrado com sucesso!!!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        btn_Editar.Enabled = true;
-                        btn_Excluir.Enabled = true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Campos obrigatórios não foram preenchidos", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    MessageBox.Show("Esgotou o limite de Hóspdes cadastrados suportado pelo sistema, por favor exclua algum regisrtro!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -77,9 +60,9 @@ namespace Software_Pim_3_Semestre
 
         private void Frm_CadastroHospede_Load(object sender, EventArgs e)
         {
-            
+
         }
-        
+
         private void btn_Limpar_Click(object sender, EventArgs e)
         {
             LimparCampos();
@@ -113,8 +96,6 @@ namespace Software_Pim_3_Semestre
 
         public void CarregaObjHp() //Verifica se o Obj Hospede já está Cadastrado.
         {
-            if (Hp.Cpf != null || Hp.Passaporte != null)
-            {
                 txb_Nome.Text = Hp.Nome;
                 maskedtxb_DtNasc.Text = Hp.Dt_Nasc;
                 maskedtxb_Rg.Text = Hp.Rg;
@@ -130,7 +111,6 @@ namespace Software_Pim_3_Semestre
                 maskedtxb_CelularDois.Text = Hp.Celular_Dois;
                 txb_Email.Text = Hp.Email;
                 txb_Obs.Text = Hp.Obs;
-            }
         }
 
         private void btn_Excluir_Click(object sender, EventArgs e)
@@ -147,9 +127,37 @@ namespace Software_Pim_3_Semestre
         private void btn_Editar_Click(object sender, EventArgs e)
         {
             CarregaObjHp();
-            btn_Editar.Enabled = false;
-            btn_Excluir.Enabled = false;
+        //    btn_Editar.Enabled = false;
+        //    btn_Excluir.Enabled = false;
             IsEdit = true;
+        }
+
+        public void VerificaNull()
+        {
+            if (/*txb_Nome.Text != null && maskedtxb_DtNasc.MaskCompleted && */maskedtxb_Passaporte.MaskCompleted)
+            {
+                if (IsEdit == true)
+                {
+                    MessageBox.Show("Hóspede editado com sucesso!!!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btn_Editar.Enabled = true;
+                    btn_Excluir.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Hóspede cadastrado com sucesso!!!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btn_Editar.Enabled = true;
+                    btn_Excluir.Enabled = true;
+                }
+                lblNome.Text = Hp.Nome;
+                lbl_CpfPassaporte.Text = Hp.Cpf;
+                lbl_DtNascimento.Text = Hp.Dt_Nasc;
+                LimparCampos();
+            }
+            else
+            {
+                MessageBox.Show("Campos obrigatórios não foram preenchidos", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
+
