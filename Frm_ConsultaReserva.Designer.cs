@@ -53,6 +53,7 @@
             // Btn_Atualizar
             // 
             this.Btn_Atualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.Btn_Atualizar.ForeColor = System.Drawing.Color.DarkBlue;
             this.Btn_Atualizar.Location = new System.Drawing.Point(12, 478);
             this.Btn_Atualizar.Name = "Btn_Atualizar";
             this.Btn_Atualizar.Size = new System.Drawing.Size(87, 30);
@@ -63,6 +64,7 @@
             // btn_Editar
             // 
             this.btn_Editar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Editar.ForeColor = System.Drawing.Color.ForestGreen;
             this.btn_Editar.Location = new System.Drawing.Point(105, 478);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(87, 30);

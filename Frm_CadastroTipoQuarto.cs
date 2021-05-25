@@ -14,11 +14,11 @@ namespace Software_Pim_3_Semestre
     {
         bool resp = false;
         bool IsEdit = false;
-        TipoQuarto TipoQ;
+        TipoQuarto TipoQuarto;
 
         public Frm_CadastroTipoQuarto()
         {
-            TipoQ = new TipoQuarto();
+            TipoQuarto = new TipoQuarto();
             InitializeComponent();
         }
 
@@ -35,7 +35,7 @@ namespace Software_Pim_3_Semestre
                 if (IsEdit == true)
                 {
                     //Edição
-                    TipoQ.Editar(txb_Tipo.Text, txb_QtdHospede.Text, txb_ValorDiaria.Text);
+                    TipoQuarto.Editar(txb_Tipo.Text, txb_QtdHospede.Text, txb_ValorDiaria.Text);
                     MessageBox.Show("Tipo de Quarto editado com sucesso!!!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LimparCampos();
                     btn_Editar.Enabled = true;
@@ -47,7 +47,7 @@ namespace Software_Pim_3_Semestre
                     if (lbl_Tipo.Text == "...")
                     {
                         //Novo Cadastro
-                        TipoQ.Incluir(txb_Tipo.Text, txb_QtdHospede.Text, txb_ValorDiaria.Text);
+                        TipoQuarto.Incluir(txb_Tipo.Text, txb_QtdHospede.Text, txb_ValorDiaria.Text);
                         MessageBox.Show("Tipo de Quarto cadastrado com sucesso!!!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimparCampos();
                         btn_Editar.Enabled = true;
@@ -59,9 +59,9 @@ namespace Software_Pim_3_Semestre
                         MessageBox.Show("Esgotou o limite de Novos Tipos de Quartos cadastrados suportado pelo sistema, por favor exclua algum regisrtro!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                lbl_Tipo.Text = TipoQ.Tipo;
-                lbl_QtdMaxp.Text = TipoQ.QtdMax_Hp.ToString();
-                lbl_ValorD.Text = TipoQ.Valor_Diaria.ToString();
+                lbl_Tipo.Text = TipoQuarto.Tipo;
+                lbl_QtdMaxp.Text = TipoQuarto.QtdMax_Hp.ToString();
+                lbl_ValorD.Text = TipoQuarto.Valor_Diaria.ToString();
             }
         }
 
@@ -77,8 +77,8 @@ namespace Software_Pim_3_Semestre
 
         private void btn_Deletar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Tipo de quarto:" + TipoQ.Tipo + " excluido com com sucesso!!!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            TipoQ.Excluir();
+            MessageBox.Show("Tipo de quarto:" + TipoQuarto.Tipo + " excluido com com sucesso!!!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            TipoQuarto.Excluir();
             lbl_Tipo.Text = "...";
             lbl_QtdMaxp.Text = "...";
             lbl_ValorD.Text = "...";
@@ -109,9 +109,9 @@ namespace Software_Pim_3_Semestre
         }
         public void CarregaObjTq()
         {
-            txb_Tipo.Text = TipoQ.Tipo;
-            txb_QtdHospede.Text = TipoQ.QtdMax_Hp.ToString();
-            txb_ValorDiaria.Text = TipoQ.Valor_Diaria.ToString();
+            txb_Tipo.Text = TipoQuarto.Tipo;
+            txb_QtdHospede.Text = TipoQuarto.QtdMax_Hp.ToString();
+            txb_ValorDiaria.Text = TipoQuarto.Valor_Diaria.ToString();
         }
 
         public void LimparCampos()

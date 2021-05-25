@@ -121,6 +121,7 @@
             // btn_Atualizar
             // 
             this.btn_Atualizar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Atualizar.ForeColor = System.Drawing.Color.DarkBlue;
             this.btn_Atualizar.Location = new System.Drawing.Point(12, 412);
             this.btn_Atualizar.Name = "btn_Atualizar";
             this.btn_Atualizar.Size = new System.Drawing.Size(87, 30);

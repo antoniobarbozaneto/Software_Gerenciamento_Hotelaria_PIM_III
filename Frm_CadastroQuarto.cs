@@ -23,7 +23,7 @@ namespace Software_Pim_3_Semestre
 
         private void Frm_CadastroQuarto_Load(object sender, EventArgs e)
         {
-            Scbx_Tipo.Text = quarto.tipoQuarto.Tipo;
+            cbx_Tipo.Text = quarto.tipoQuarto.Tipo;
             txb_QtdHospede.Text = quarto.tipoQuarto.QtdMax_Hp.ToString();
             txb_ValorDiaria.Text = quarto.tipoQuarto.Valor_Diaria.ToString();
         }

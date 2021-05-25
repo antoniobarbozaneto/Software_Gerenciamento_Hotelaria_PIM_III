@@ -64,6 +64,7 @@
             // btn_Excluir
             // 
             this.btn_Excluir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Excluir.ForeColor = System.Drawing.Color.Red;
             this.btn_Excluir.Location = new System.Drawing.Point(431, 483);
             this.btn_Excluir.Name = "btn_Excluir";
             this.btn_Excluir.Size = new System.Drawing.Size(87, 30);
@@ -74,6 +75,7 @@
             // btn_Editar
             // 
             this.btn_Editar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Editar.ForeColor = System.Drawing.Color.DarkBlue;
             this.btn_Editar.Location = new System.Drawing.Point(338, 483);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(87, 30);
@@ -217,6 +219,7 @@
             // btn_Confirmar
             // 
             this.btn_Confirmar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Confirmar.ForeColor = System.Drawing.Color.ForestGreen;
             this.btn_Confirmar.Location = new System.Drawing.Point(12, 483);
             this.btn_Confirmar.Name = "btn_Confirmar";
             this.btn_Confirmar.Size = new System.Drawing.Size(102, 30);

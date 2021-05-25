@@ -254,6 +254,7 @@
             // btn_Gravar
             // 
             this.btn_Gravar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Gravar.ForeColor = System.Drawing.Color.ForestGreen;
             this.btn_Gravar.Location = new System.Drawing.Point(48, 514);
             this.btn_Gravar.Name = "btn_Gravar";
             this.btn_Gravar.Size = new System.Drawing.Size(98, 33);
@@ -265,6 +266,7 @@
             // btn_Limpar
             // 
             this.btn_Limpar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Limpar.ForeColor = System.Drawing.Color.Red;
             this.btn_Limpar.Location = new System.Drawing.Point(247, 514);
             this.btn_Limpar.Name = "btn_Limpar";
             this.btn_Limpar.Size = new System.Drawing.Size(95, 33);
@@ -276,6 +278,7 @@
             // btn_Sair
             // 
             this.btn_Sair.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sair.ForeColor = System.Drawing.Color.DarkBlue;
             this.btn_Sair.Location = new System.Drawing.Point(152, 514);
             this.btn_Sair.Name = "btn_Sair";
             this.btn_Sair.Size = new System.Drawing.Size(89, 33);
@@ -491,6 +494,7 @@
             // 
             this.btn_Editar.Enabled = false;
             this.btn_Editar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Editar.ForeColor = System.Drawing.Color.DarkBlue;
             this.btn_Editar.Location = new System.Drawing.Point(333, 13);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Size = new System.Drawing.Size(89, 30);
@@ -503,6 +507,7 @@
             // 
             this.btn_Deletar.Enabled = false;
             this.btn_Deletar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Deletar.ForeColor = System.Drawing.Color.Red;
             this.btn_Deletar.Location = new System.Drawing.Point(333, 51);
             this.btn_Deletar.Name = "btn_Deletar";
             this.btn_Deletar.Size = new System.Drawing.Size(89, 30);

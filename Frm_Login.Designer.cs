@@ -79,6 +79,7 @@
             // btn_Entrar
             // 
             this.btn_Entrar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Entrar.ForeColor = System.Drawing.Color.ForestGreen;
             this.btn_Entrar.Location = new System.Drawing.Point(58, 124);
             this.btn_Entrar.Name = "btn_Entrar";
             this.btn_Entrar.Size = new System.Drawing.Size(82, 36);
@@ -90,6 +91,7 @@
             // btn_Sair
             // 
             this.btn_Sair.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Sair.ForeColor = System.Drawing.Color.Red;
             this.btn_Sair.Location = new System.Drawing.Point(146, 124);
             this.btn_Sair.Name = "btn_Sair";
             this.btn_Sair.Size = new System.Drawing.Size(82, 36);

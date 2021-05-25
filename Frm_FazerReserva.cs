@@ -12,18 +12,19 @@ namespace Software_Pim_3_Semestre
 {
     public partial class Frm_FazerReserva : Form
     {
-        Frm_ConsultaHospede frm_ConsultaHospede;
-        Frm_ConsultaQuarto frm_ConsultaQuarto;
+        Hospede hospede;
+        Quarto quarto;
+        Reserva reserva;
+        //Frm_ConsultaHospede frm_ConsultaHospede;
+        //Frm_ConsultaQuarto frm_ConsultaQuarto;
         public Frm_FazerReserva()
         {
-            frm_ConsultaHospede = new Frm_ConsultaHospede();
-            frm_ConsultaQuarto = new Frm_ConsultaQuarto();
+            hospede = new Hospede();
+            quarto = new Quarto();
+            reserva = new Reserva();
+            //frm_ConsultaHospede = new Frm_ConsultaHospede();
+            //frm_ConsultaQuarto = new Frm_ConsultaQuarto();
             InitializeComponent();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-        
         }
 
         private void Frm_FazerReserva_Load(object sender, EventArgs e)
@@ -32,20 +33,69 @@ namespace Software_Pim_3_Semestre
 
         private void btn_BuscarHospede_Click(object sender, EventArgs e)
         {
-            frm_ConsultaHospede.btn_Confirmar.Show();
-            frm_ConsultaHospede.btn_Atualizar.Show();
-            frm_ConsultaHospede.btn_Editar.Hide();
-            frm_ConsultaHospede.btn_Excluir.Hide();
-            frm_ConsultaHospede.ShowDialog();            
+            txb_Nome.Text = hospede.Nome;
+            maskedtxb_Cpf.Text = hospede.Cpf;
+            maskedtxb_Passaporte.Text = hospede.Passaporte;
+            //frm_ConsultaHospede.btn_Confirmar.Show();
+            //frm_ConsultaHospede.btn_Atualizar.Show();
+            //frm_ConsultaHospede.btn_Editar.Hide();
+            //frm_ConsultaHospede.btn_Excluir.Hide();
+            //frm_ConsultaHospede.ShowDialog();            
         }
 
         private void btn_BuscarQuarto_Click(object sender, EventArgs e)
         {
-            frm_ConsultaQuarto.btn_Confirmar.Show();
-            frm_ConsultaQuarto.btn_Atualizar.Show();
-            frm_ConsultaQuarto.btn_Editar.Hide();
-            frm_ConsultaQuarto.btn_Excluir.Hide();
-            frm_ConsultaQuarto.ShowDialog();            
+            txb_NumQuarto.Text = quarto.Numero;
+            txb_TipoQuarto.Text = quarto.tipoQuarto.Tipo;
+            //frm_ConsultaQuarto.btn_Confirmar.Show();
+            //frm_ConsultaQuarto.btn_Atualizar.Show();
+            //frm_ConsultaQuarto.btn_Editar.Hide();
+            //frm_ConsultaQuarto.btn_Excluir.Hide();
+            //frm_ConsultaQuarto.ShowDialog();            
+        }
+
+        private void btn_Limpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+
+        private void btn_Confirmar_Click(object sender, EventArgs e)
+        {
+            if (txb_Nome.Text != "" && (maskedtxb_Cpf.Text != "" || maskedtxb_Passaporte.Text != "") && txb_NumQuarto.Text != "" && txb_TipoQuarto.Text != "" && maskedtxb_dt_Checkin.MaskCompleted && maskedtxb_dtCheckout.MaskCompleted && txb_QtdHospede.Text != "")
+            {
+                if (Convert.ToInt32(txb_QtdHospede.Text) > reserva.Qtd_Hospede)
+                {
+                    MessageBox.Show("Esse quarto não suporta hospedar mais que [" + reserva.Qtd_Hospede + "] Hóspedes, escolha outro tipo de quarto", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    txb_ValorTotal.Text = reserva.CalcValorReserva(DateTime.Parse(maskedtxb_dt_Checkin.Text), DateTime.Parse(maskedtxb_dtCheckout.Text), Convert.ToInt32(txb_QtdHospede.Text)).ToString();
+                    MessageBox.Show("Valor Diária por Cada Pessoa: R$: " + quarto.tipoQuarto.Valor_Diaria + "\n" +
+                        "Quantidade de Hospedes: " + reserva.Qtd_Hospede + "\n" +
+                        "Valor Diária X Quantidade de hóspedes: " + reserva.Res + "\n" +
+                        "Quantidade de Dias de Hospedagem: " + reserva.QtDias + "\n" +
+                        "Valor Total da Reserva: " + reserva.ResFinal);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Campos obrigatórios não foram preenchidos", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+        }
+
+        //Métodos úteis.
+        public void LimparCampos()
+        {
+            txb_Nome.Text = "";
+            maskedtxb_Cpf.Text = "";
+            maskedtxb_Passaporte.Text = "";
+            txb_NumQuarto.Text = "";
+            txb_TipoQuarto.Text = "";
+            maskedtxb_dt_Checkin.Text = "";
+            maskedtxb_dtCheckout.Text = "";
+            txb_QtdHospede.Text = "";
+            txb_ValorTotal.Text = "";
         }
     }
 }
