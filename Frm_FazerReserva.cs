@@ -63,9 +63,9 @@ namespace Software_Pim_3_Semestre
         {
             if (txb_Nome.Text != "" && (maskedtxb_Cpf.Text != "" || maskedtxb_Passaporte.Text != "") && txb_NumQuarto.Text != "" && txb_TipoQuarto.Text != "" && maskedtxb_dt_Checkin.MaskCompleted && maskedtxb_dtCheckout.MaskCompleted && txb_QtdHospede.Text != "")
             {
-                if (Convert.ToInt32(txb_QtdHospede.Text) > reserva.Qtd_Hospede)
+                if (Convert.ToInt32(txb_QtdHospede.Text) > quarto.tipoQuarto.QtdMax_Hp)
                 {
-                    MessageBox.Show("Esse quarto não suporta hospedar mais que [" + reserva.Qtd_Hospede + "] Hóspedes, escolha outro tipo de quarto", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Esse quarto não suporta hospedar mais que [" + quarto.tipoQuarto.QtdMax_Hp + "] Hóspedes, escolha outro tipo de quarto", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {

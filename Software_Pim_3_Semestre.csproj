@@ -119,6 +119,7 @@
       <DependentUpon>Frm_CadastroTipoQuarto.cs</DependentUpon>
     </Compile>
     <Compile Include="Hospede.cs" />
+    <Compile Include="Pagamento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quarto.cs" />

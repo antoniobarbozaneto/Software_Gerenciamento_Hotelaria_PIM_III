@@ -8,6 +8,7 @@ namespace Software_Pim_3_Semestre
 {
     class Hospede
     {
+        public int Id_Hospede { get; set; }
         //public string Nome { get; set; }
         private static string nome;        
         public string Dt_Nasc { get; set; }
@@ -50,6 +51,7 @@ namespace Software_Pim_3_Semestre
 
         public void Incluir(string Nome, string Dt_Nasc, string Rg, string Cpf, string Passaporte, string Rua, string Num, string Bairro, string Cidade, string Cep, string Telefone, string Celular_Um, string Celular_Dois, string Email, string Obs)
         {
+            this.Id_Hospede++;
             this.Nome = Nome;
             this.Dt_Nasc = Dt_Nasc;
             this.Rg = Rg;

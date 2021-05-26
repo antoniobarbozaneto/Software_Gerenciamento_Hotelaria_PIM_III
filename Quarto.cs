@@ -10,6 +10,7 @@ namespace Software_Pim_3_Semestre
     {
         private static string numero;
         private static string andar;
+        private static string status;
 
         public string Numero
         {
@@ -21,6 +22,12 @@ namespace Software_Pim_3_Semestre
         {
             get { return andar; }
             set { andar = value; }
+        }
+
+        public string Status
+        {
+            get { return status; }
+            set { status = value; }
         }
 
         public TipoQuarto tipoQuarto;
