@@ -15,6 +15,8 @@ namespace Software_Pim_3_Semestre
         Hospede hospede;
         Quarto quarto;
         Reserva reserva;
+        Frm_Pagamento frm_Pagamento;
+
         //Frm_ConsultaHospede frm_ConsultaHospede;
         //Frm_ConsultaQuarto frm_ConsultaQuarto;
         public Frm_FazerReserva()
@@ -22,6 +24,7 @@ namespace Software_Pim_3_Semestre
             hospede = new Hospede();
             quarto = new Quarto();
             reserva = new Reserva();
+            frm_Pagamento = new Frm_Pagamento();
             //frm_ConsultaHospede = new Frm_ConsultaHospede();
             //frm_ConsultaQuarto = new Frm_ConsultaQuarto();
             InitializeComponent();
@@ -75,6 +78,22 @@ namespace Software_Pim_3_Semestre
                         "Valor Diária X Quantidade de hóspedes: " + reserva.Res + "\n" +
                         "Quantidade de Dias de Hospedagem: " + reserva.QtDias + "\n" +
                         "Valor Total da Reserva: " + reserva.ResFinal);
+                    //
+                    lbl_NumReserva.Text = reserva.Num_Reserva.ToString();
+                    lbl_Nome.Text = hospede.Nome;
+                    lbl_DtCheckin.Text = reserva.dt_Checkin.ToString("dd/mm/yyyy");
+                    lbl_DtCheckout.Text = reserva.dt_Checkout.ToString("dd/mm/yyyy");
+                    lbl_ValorTotal.Text = reserva.ResFinal.ToString();
+                    //
+                    if (maskedtxb_Cpf.MaskCompleted)
+                    {
+                        lbl_CpfPassaporte.Text = hospede.Cpf;
+                    }
+                    else
+                    {
+                        lbl_CpfPassaporte.Text = hospede.Passaporte;
+                    }
+                    //
                 }
             }
             else
@@ -83,7 +102,10 @@ namespace Software_Pim_3_Semestre
 
             }
         }
-
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         //Métodos úteis.
         public void LimparCampos()
         {
@@ -96,6 +118,11 @@ namespace Software_Pim_3_Semestre
             maskedtxb_dtCheckout.Text = "";
             txb_QtdHospede.Text = "";
             txb_ValorTotal.Text = "";
+        }
+
+        private void btn_DarBaixa_Click(object sender, EventArgs e)
+        {
+            frm_Pagamento.ShowDialog();
         }
     }
 }

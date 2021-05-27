@@ -15,25 +15,23 @@ namespace Software_Pim_3_Semestre
         Frm_CadastroHospede frm_CadastroHospede;
         Frm_CadastroQuarto frm_CadastroQuarto;
         Frm_FazerReserva frm_FazerReserva;
-        Frm_ConsultaHospede frm_ConsultaHospede;
-        Frm_ConsultaReserva frm_ConsultaReserva;
-        Frm_ConsultaQuarto frm_ConsultaQuarto;
         Frm_CadastroUsuario frm_CadastroUsuario;
-        Frm_ConsultaPagamento frm_ConsultaPagamento;
         Frm_CadastroTipoQuarto frm_CadastroTipoQuarto;
+        //Frm_ConsultaHospede frm_ConsultaHospede;
+        //Frm_ConsultaReserva frm_ConsultaReserva;
+        //Frm_ConsultaQuarto frm_ConsultaQuarto;
+        //Frm_ConsultaPagamento frm_ConsultaPagamento;
         public Frm_Principal()
         {
             frm_CadastroHospede = new Frm_CadastroHospede();
             frm_CadastroQuarto = new Frm_CadastroQuarto();
             frm_FazerReserva = new Frm_FazerReserva();
-            frm_ConsultaHospede = new Frm_ConsultaHospede();            
-            frm_ConsultaReserva = new Frm_ConsultaReserva();
-            frm_ConsultaQuarto = new Frm_ConsultaQuarto();
             frm_CadastroUsuario = new Frm_CadastroUsuario();
-            frm_ConsultaPagamento = new Frm_ConsultaPagamento();
             frm_CadastroTipoQuarto = new Frm_CadastroTipoQuarto();
-
-
+            //frm_ConsultaHospede = new Frm_ConsultaHospede();            
+            //frm_ConsultaReserva = new Frm_ConsultaReserva();
+            //frm_ConsultaQuarto = new Frm_ConsultaQuarto();
+            //frm_ConsultaPagamento = new Frm_ConsultaPagamento();
             InitializeComponent();
         }
 
@@ -64,15 +62,15 @@ namespace Software_Pim_3_Semestre
 
         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_ConsultaHospede.btn_Confirmar.Hide();
-            frm_ConsultaHospede.ShowDialog();
+           //frm_ConsultaHospede.btn_Confirmar.Hide();
+           //frm_ConsultaHospede.ShowDialog();
             
         }
 
         private void consultaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frm_ConsultaQuarto.btn_Confirmar.Hide();
-            frm_ConsultaQuarto.ShowDialog();
+           //frm_ConsultaQuarto.btn_Confirmar.Hide();
+           // frm_ConsultaQuarto.ShowDialog();
         }
 
         private void reservaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,12 +85,12 @@ namespace Software_Pim_3_Semestre
 
         private void consultaToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            frm_ConsultaReserva.ShowDialog();
+            //frm_ConsultaReserva.ShowDialog();
         }
 
         private void consultaToolStripMenuItem4_Click(object sender, EventArgs e)
         {
-            frm_ConsultaPagamento.ShowDialog();
+            //frm_ConsultaPagamento.ShowDialog();
         }
 
         private void cadastroNovoToolStripMenuItem_Click(object sender, EventArgs e)

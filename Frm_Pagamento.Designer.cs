@@ -40,12 +40,12 @@
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txb_ValorParcela = new System.Windows.Forms.TextBox();
             this.btn_BuscarReserva = new System.Windows.Forms.Button();
             this.txb_NumReserva = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txb_ValorPago = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txb_ValorParcela = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -156,6 +156,7 @@
             this.btn_Cancelar.TabIndex = 10;
             this.btn_Cancelar.Text = "CANCELAR";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // label5
             // 
@@ -188,6 +189,24 @@
             this.groupBox1.Size = new System.Drawing.Size(344, 221);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(45, 114);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(123, 16);
+            this.label7.TabIndex = 57;
+            this.label7.Text = "Valor por Parcela:";
+            // 
+            // txb_ValorParcela
+            // 
+            this.txb_ValorParcela.Location = new System.Drawing.Point(174, 113);
+            this.txb_ValorParcela.Name = "txb_ValorParcela";
+            this.txb_ValorParcela.ReadOnly = true;
+            this.txb_ValorParcela.Size = new System.Drawing.Size(100, 20);
+            this.txb_ValorParcela.TabIndex = 57;
             // 
             // btn_BuscarReserva
             // 
@@ -224,24 +243,6 @@
             this.txb_ValorPago.Name = "txb_ValorPago";
             this.txb_ValorPago.Size = new System.Drawing.Size(100, 20);
             this.txb_ValorPago.TabIndex = 3;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(45, 114);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 16);
-            this.label7.TabIndex = 57;
-            this.label7.Text = "Valor por Parcela:";
-            // 
-            // txb_ValorParcela
-            // 
-            this.txb_ValorParcela.Location = new System.Drawing.Point(174, 113);
-            this.txb_ValorParcela.Name = "txb_ValorParcela";
-            this.txb_ValorParcela.ReadOnly = true;
-            this.txb_ValorParcela.Size = new System.Drawing.Size(100, 20);
-            this.txb_ValorParcela.TabIndex = 57;
             // 
             // Frm_Pagamento
             // 

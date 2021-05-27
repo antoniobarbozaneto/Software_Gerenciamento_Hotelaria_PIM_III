@@ -13,9 +13,10 @@ namespace Software_Pim_3_Semestre
     public partial class Frm_CadastroHospede : Form
     {
         bool IsEdit = false;
-        Hospede Hp = new Hospede();
+        Hospede hospede;
         public Frm_CadastroHospede()
         {
+            hospede = new Hospede();
             InitializeComponent();
         }
 
@@ -23,7 +24,7 @@ namespace Software_Pim_3_Semestre
         {
             if (IsEdit == true)
             {
-                Hp.Editar(txb_Nome.Text, maskedtxb_DtNasc.Text, maskedtxb_Rg.Text, maskedtxb_Cpf.Text, maskedtxb_Passaporte.Text, txb_Rua.Text, txb_Numero.Text, txb_Bairro.Text, txb_Cidade.Text, maskedtxb_Cep.Text, maskedtxb_Telefone.Text, maskedtxb_CelularUm.Text, maskedtxb_CelularDois.Text, txb_Email.Text, txb_Obs.Text);
+                hospede.Editar(txb_Nome.Text, maskedtxb_DtNasc.Text, maskedtxb_Rg.Text, maskedtxb_Cpf.Text, maskedtxb_Passaporte.Text, txb_Rua.Text, txb_Numero.Text, txb_Bairro.Text, txb_Cidade.Text, maskedtxb_Cep.Text, maskedtxb_Telefone.Text, maskedtxb_CelularUm.Text, maskedtxb_CelularDois.Text, txb_Email.Text, txb_Obs.Text);
                 VerificaNull();
                 IsEdit = false;
             }
@@ -32,7 +33,7 @@ namespace Software_Pim_3_Semestre
                 if (lbl_CpfPassaporte.Text == "...")
                 {
 
-                    Hp.Incluir(txb_Nome.Text, maskedtxb_DtNasc.Text, maskedtxb_Rg.Text, maskedtxb_Cpf.Text, maskedtxb_Passaporte.Text, txb_Rua.Text, txb_Numero.Text, txb_Bairro.Text, txb_Cidade.Text, maskedtxb_Cep.Text, maskedtxb_Telefone.Text, maskedtxb_CelularUm.Text, maskedtxb_CelularDois.Text, txb_Email.Text, txb_Obs.Text);
+                    hospede.Incluir(txb_Nome.Text, maskedtxb_DtNasc.Text, maskedtxb_Rg.Text, maskedtxb_Cpf.Text, maskedtxb_Passaporte.Text, txb_Rua.Text, txb_Numero.Text, txb_Bairro.Text, txb_Cidade.Text, maskedtxb_Cep.Text, maskedtxb_Telefone.Text, maskedtxb_CelularUm.Text, maskedtxb_CelularDois.Text, txb_Email.Text, txb_Obs.Text);
                     VerificaNull();
                 }
                 else
@@ -70,8 +71,8 @@ namespace Software_Pim_3_Semestre
 
         private void btn_Excluir_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hóspede:" + Hp.Nome + " Excluido com Sucesso!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            Hp.Excluir();
+            MessageBox.Show("Hóspede:" + hospede.Nome + " Excluido com Sucesso!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            hospede.Excluir();
             lbl_Nome.Text = "...";
             lbl_CpfPassaporte.Text = "...";
             lbl_DtNascimento.Text = "...";
@@ -81,7 +82,7 @@ namespace Software_Pim_3_Semestre
 
         private void btn_Editar_Click(object sender, EventArgs e)
         {
-            CarregaObjHp();
+            CarregaObjhospede();
             IsEdit = true;
         }
 
@@ -110,23 +111,23 @@ namespace Software_Pim_3_Semestre
             txb_Obs.Text = "";
         }
 
-        public void CarregaObjHp() //Verifica se o Obj Hospede já está Cadastrado.
+        public void CarregaObjhospede() //Verifica se o Obj Hospede já está Cadastrado.
         {
-            txb_Nome.Text = Hp.Nome;
-            maskedtxb_DtNasc.Text = Hp.Dt_Nasc;
-            maskedtxb_Rg.Text = Hp.Rg;
-            maskedtxb_Cpf.Text = Hp.Cpf;
-            maskedtxb_Passaporte.Text = Hp.Passaporte;
-            txb_Rua.Text = Hp.Rua;
-            txb_Numero.Text = Hp.Num;
-            txb_Bairro.Text = Hp.Bairro;
-            txb_Cidade.Text = Hp.Cidade;
-            maskedtxb_Cep.Text = Hp.Cep;
-            maskedtxb_Telefone.Text = Hp.Telefone;
-            maskedtxb_CelularUm.Text = Hp.Celular_Um;
-            maskedtxb_CelularDois.Text = Hp.Celular_Dois;
-            txb_Email.Text = Hp.Email;
-            txb_Obs.Text = Hp.Obs;
+            txb_Nome.Text = hospede.Nome;
+            maskedtxb_DtNasc.Text = hospede.Dt_Nasc;
+            maskedtxb_Rg.Text = hospede.Rg;
+            maskedtxb_Cpf.Text = hospede.Cpf;
+            maskedtxb_Passaporte.Text = hospede.Passaporte;
+            txb_Rua.Text = hospede.Rua;
+            txb_Numero.Text = hospede.Num;
+            txb_Bairro.Text = hospede.Bairro;
+            txb_Cidade.Text = hospede.Cidade;
+            maskedtxb_Cep.Text = hospede.Cep;
+            maskedtxb_Telefone.Text = hospede.Telefone;
+            maskedtxb_CelularUm.Text = hospede.Celular_Um;
+            maskedtxb_CelularDois.Text = hospede.Celular_Dois;
+            txb_Email.Text = hospede.Email;
+            txb_Obs.Text = hospede.Obs;
         }
 
         public void VerificaNull()
@@ -145,9 +146,16 @@ namespace Software_Pim_3_Semestre
                     btn_Editar.Enabled = true;
                     btn_Deletar.Enabled = true;
                 }
-                lbl_Nome.Text = Hp.Nome;
-                lbl_CpfPassaporte.Text = Hp.Cpf;
-                lbl_DtNascimento.Text = Hp.Dt_Nasc;
+                lbl_Nome.Text = hospede.Nome;
+                lbl_DtNascimento.Text = hospede.Dt_Nasc;
+                if (maskedtxb_Cpf.MaskCompleted)
+                {
+                    lbl_CpfPassaporte.Text = hospede.Cpf;
+                }
+                else
+                {
+                    lbl_CpfPassaporte.Text = hospede.Passaporte;
+                }
                 LimparCampos();
             }
             else

@@ -27,7 +27,7 @@ namespace Software_Pim_3_Semestre
 
         private void Frm_Pagamento_Load(object sender, EventArgs e)
         {
-            //txb_ValorPago.Text = "150";
+            LimparCampos();
         }
 
         private void cbx_FormaPag_SelectedIndexChanged(object sender, EventArgs e)
@@ -42,6 +42,7 @@ namespace Software_Pim_3_Semestre
             {
                 if (cbx_FormaPag.Text == "Cartão Débito")
                 {
+                    txb_Troco.Text = "";
                     MessageBox.Show("Forma de pagamento escolhida foi em Cartão Débito");
                     cbx_Parcelas.Enabled = false;
                     txb_ValorPago.Enabled = false;
@@ -51,6 +52,7 @@ namespace Software_Pim_3_Semestre
                 {
                     if (cbx_FormaPag.Text == "Cartão Crédito")
                     {
+                        txb_Troco.Text = "";
                         MessageBox.Show("Forma de pagamento escolhida foi em Cartão Crédito");
                         cbx_Parcelas.Enabled = true;
                         txb_ValorPago.Enabled = false;
@@ -90,11 +92,10 @@ namespace Software_Pim_3_Semestre
                     pagamento.PagDebito(Convert.ToDouble(txb_ValorTotal.Text));
                     txb_ValorPago.Text = pagamento.ValorPago.ToString();
                     MessageBox.Show("Pagamento Realizado com sucesso!!!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //pagamento.PagDebito
                 }
                 else
                 {
-                    if(cbx_FormaPag.Text == "Cartão Crédito")
+                    if (cbx_FormaPag.Text == "Cartão Crédito")
                     {
                         pagamento.PagCredito(Convert.ToDouble(txb_ValorTotal.Text), Convert.ToInt32(cbx_Parcelas.Text));
                         txb_ValorParcela.Text = pagamento.ValorParcela.ToString();
@@ -114,6 +115,12 @@ namespace Software_Pim_3_Semestre
             txb_ValorTotal.Text = "";
             txb_ValorPago.Text = "";
             txb_ValorParcela.Text = "";
+            txb_Troco.Text = "";
+        }
+
+        private void btn_Cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

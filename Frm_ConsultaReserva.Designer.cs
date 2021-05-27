@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Btn_Atualizar = new System.Windows.Forms.Button();
-            this.btn_Editar = new System.Windows.Forms.Button();
+            this.btn_DarBaixa = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -61,17 +61,17 @@
             this.Btn_Atualizar.Text = "ATUALIZAR";
             this.Btn_Atualizar.UseVisualStyleBackColor = true;
             // 
-            // btn_Editar
+            // btn_DarBaixa
             // 
-            this.btn_Editar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Editar.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btn_Editar.Location = new System.Drawing.Point(105, 478);
-            this.btn_Editar.Name = "btn_Editar";
-            this.btn_Editar.Size = new System.Drawing.Size(87, 30);
-            this.btn_Editar.TabIndex = 13;
-            this.btn_Editar.Text = "DAR BAIXA";
-            this.btn_Editar.UseVisualStyleBackColor = true;
-            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
+            this.btn_DarBaixa.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_DarBaixa.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btn_DarBaixa.Location = new System.Drawing.Point(105, 478);
+            this.btn_DarBaixa.Name = "btn_DarBaixa";
+            this.btn_DarBaixa.Size = new System.Drawing.Size(87, 30);
+            this.btn_DarBaixa.TabIndex = 13;
+            this.btn_DarBaixa.Text = "DAR BAIXA";
+            this.btn_DarBaixa.UseVisualStyleBackColor = true;
+            this.btn_DarBaixa.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
             // groupBox1
             // 
@@ -217,7 +217,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 522);
             this.Controls.Add(this.Btn_Atualizar);
-            this.Controls.Add(this.btn_Editar);
+            this.Controls.Add(this.btn_DarBaixa);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -237,7 +237,7 @@
         #endregion
 
         private System.Windows.Forms.Button Btn_Atualizar;
-        private System.Windows.Forms.Button btn_Editar;
+        private System.Windows.Forms.Button btn_DarBaixa;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView_Hospedes;
         private System.Windows.Forms.TextBox txb_Consulta;

@@ -71,6 +71,7 @@ namespace Software_Pim_3_Semestre
 
         public void Excluir() // Mtd Exclui Dados do Obj.
         {
+            this.Id_Hospede = 0;
             this.Nome = "";
             this.Dt_Nasc = "";
             this.Rg = "";
@@ -90,6 +91,7 @@ namespace Software_Pim_3_Semestre
 
         public void Editar(string Nome, string Dt_Nasc, string Rg, string Cpf, string Passaporte, string Rua, string Num, string Bairro, string Cidade, string Cep, string Telefone, string Celular_Um, string Celular_Dois, string Email, string Obs)
         {
+            this.Id_Hospede = Id_Hospede;
             this.Nome = Nome;
             this.Dt_Nasc = Dt_Nasc;
             this.Rg = Rg;

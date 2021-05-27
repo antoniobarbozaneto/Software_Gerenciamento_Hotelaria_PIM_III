@@ -125,6 +125,7 @@
     <Compile Include="Quarto.cs" />
     <Compile Include="Reserva.cs" />
     <Compile Include="TipoQuarto.cs" />
+    <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="Frm_CadastroHospede.resx">
       <DependentUpon>Frm_CadastroHospede.cs</DependentUpon>
     </EmbeddedResource>

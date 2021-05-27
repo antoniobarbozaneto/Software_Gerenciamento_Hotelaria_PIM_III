@@ -13,10 +13,10 @@ namespace Software_Pim_3_Semestre
     public partial class Frm_ConsultaHospede : Form
     {
         public Frm_CadastroHospede frm_CadastroHospede;
-        Hospede Hp;
+        Hospede hospede;
         public Frm_ConsultaHospede()
         {
-            Hp = new Hospede();
+            hospede = new Hospede();
             frm_CadastroHospede = new Frm_CadastroHospede();
 
             InitializeComponent();

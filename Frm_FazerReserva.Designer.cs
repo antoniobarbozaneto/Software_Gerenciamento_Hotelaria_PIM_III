@@ -58,10 +58,26 @@
             this.maskedtxb_Cpf = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btn_DarBaixa = new System.Windows.Forms.Button();
+            this.lbl_ValorTotal = new System.Windows.Forms.Label();
+            this.lbl_DtCheckout = new System.Windows.Forms.Label();
+            this.lbl_CpfPassaporte = new System.Windows.Forms.Label();
+            this.lbl_Nome = new System.Windows.Forms.Label();
+            this.lbl_DtCheckin = new System.Windows.Forms.Label();
+            this.lbl_NumReserva = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label17
@@ -96,6 +112,7 @@
             this.btn_Cancelar.TabIndex = 44;
             this.btn_Cancelar.Text = "CANCELAR";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // btn_Limpar
             // 
@@ -273,7 +290,7 @@
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.SystemColors.Control;
             this.label19.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.label19.Location = new System.Drawing.Point(387, 441);
+            this.label19.Location = new System.Drawing.Point(386, 440);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(142, 15);
             this.label19.TabIndex = 56;
@@ -377,7 +394,7 @@
             this.groupBox1.Controls.Add(this.btn_Cancelar);
             this.groupBox1.Location = new System.Drawing.Point(12, 54);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(517, 383);
+            this.groupBox1.Size = new System.Drawing.Size(516, 383);
             this.groupBox1.TabIndex = 57;
             this.groupBox1.TabStop = false;
             // 
@@ -392,12 +409,178 @@
             this.label11.TabIndex = 58;
             this.label11.Text = "Reservar / Hospedar";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.Control;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(657, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 19);
+            this.label9.TabIndex = 59;
+            this.label9.Text = "Reservas";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btn_DarBaixa);
+            this.groupBox5.Controls.Add(this.lbl_ValorTotal);
+            this.groupBox5.Controls.Add(this.lbl_DtCheckout);
+            this.groupBox5.Controls.Add(this.lbl_CpfPassaporte);
+            this.groupBox5.Controls.Add(this.lbl_Nome);
+            this.groupBox5.Controls.Add(this.lbl_DtCheckin);
+            this.groupBox5.Controls.Add(this.lbl_NumReserva);
+            this.groupBox5.Controls.Add(this.label18);
+            this.groupBox5.Controls.Add(this.label13);
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Location = new System.Drawing.Point(534, 54);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(320, 196);
+            this.groupBox5.TabIndex = 60;
+            this.groupBox5.TabStop = false;
+            // 
+            // btn_DarBaixa
+            // 
+            this.btn_DarBaixa.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btn_DarBaixa.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btn_DarBaixa.Location = new System.Drawing.Point(127, 160);
+            this.btn_DarBaixa.Name = "btn_DarBaixa";
+            this.btn_DarBaixa.Size = new System.Drawing.Size(87, 30);
+            this.btn_DarBaixa.TabIndex = 61;
+            this.btn_DarBaixa.Text = "DAR BAIXA";
+            this.btn_DarBaixa.UseVisualStyleBackColor = true;
+            this.btn_DarBaixa.Click += new System.EventHandler(this.btn_DarBaixa_Click);
+            // 
+            // lbl_ValorTotal
+            // 
+            this.lbl_ValorTotal.AutoSize = true;
+            this.lbl_ValorTotal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_ValorTotal.Location = new System.Drawing.Point(135, 124);
+            this.lbl_ValorTotal.Name = "lbl_ValorTotal";
+            this.lbl_ValorTotal.Size = new System.Drawing.Size(20, 16);
+            this.lbl_ValorTotal.TabIndex = 71;
+            this.lbl_ValorTotal.Text = "...";
+            // 
+            // lbl_DtCheckout
+            // 
+            this.lbl_DtCheckout.AutoSize = true;
+            this.lbl_DtCheckout.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_DtCheckout.Location = new System.Drawing.Point(135, 105);
+            this.lbl_DtCheckout.Name = "lbl_DtCheckout";
+            this.lbl_DtCheckout.Size = new System.Drawing.Size(20, 16);
+            this.lbl_DtCheckout.TabIndex = 70;
+            this.lbl_DtCheckout.Text = "...";
+            // 
+            // lbl_CpfPassaporte
+            // 
+            this.lbl_CpfPassaporte.AutoSize = true;
+            this.lbl_CpfPassaporte.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_CpfPassaporte.Location = new System.Drawing.Point(135, 64);
+            this.lbl_CpfPassaporte.Name = "lbl_CpfPassaporte";
+            this.lbl_CpfPassaporte.Size = new System.Drawing.Size(20, 16);
+            this.lbl_CpfPassaporte.TabIndex = 68;
+            this.lbl_CpfPassaporte.Text = "...";
+            // 
+            // lbl_Nome
+            // 
+            this.lbl_Nome.AutoSize = true;
+            this.lbl_Nome.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_Nome.Location = new System.Drawing.Point(135, 45);
+            this.lbl_Nome.Name = "lbl_Nome";
+            this.lbl_Nome.Size = new System.Drawing.Size(20, 16);
+            this.lbl_Nome.TabIndex = 67;
+            this.lbl_Nome.Text = "...";
+            // 
+            // lbl_DtCheckin
+            // 
+            this.lbl_DtCheckin.AutoSize = true;
+            this.lbl_DtCheckin.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_DtCheckin.Location = new System.Drawing.Point(135, 84);
+            this.lbl_DtCheckin.Name = "lbl_DtCheckin";
+            this.lbl_DtCheckin.Size = new System.Drawing.Size(20, 16);
+            this.lbl_DtCheckin.TabIndex = 69;
+            this.lbl_DtCheckin.Text = "...";
+            // 
+            // lbl_NumReserva
+            // 
+            this.lbl_NumReserva.AutoSize = true;
+            this.lbl_NumReserva.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lbl_NumReserva.Location = new System.Drawing.Point(135, 28);
+            this.lbl_NumReserva.Name = "lbl_NumReserva";
+            this.lbl_NumReserva.Size = new System.Drawing.Size(20, 16);
+            this.lbl_NumReserva.TabIndex = 66;
+            this.lbl_NumReserva.Text = "...";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label18.Location = new System.Drawing.Point(49, 124);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(80, 16);
+            this.label18.TabIndex = 63;
+            this.label18.Text = "Valor Total:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label13.Location = new System.Drawing.Point(12, 28);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(117, 16);
+            this.label13.TabIndex = 65;
+            this.label13.Text = "Número Reserva:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label14.Location = new System.Drawing.Point(22, 64);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(107, 16);
+            this.label14.TabIndex = 64;
+            this.label14.Text = "Cpf/Passaporte:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label12.Location = new System.Drawing.Point(5, 45);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(124, 16);
+            this.label12.TabIndex = 62;
+            this.label12.Text = "Nome Reservante:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label16.Location = new System.Drawing.Point(21, 103);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(108, 16);
+            this.label16.TabIndex = 63;
+            this.label16.Text = "Data Check-out:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(29, 84);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(100, 16);
+            this.label15.TabIndex = 63;
+            this.label15.Text = "Data Check-in:";
+            // 
             // Frm_FazerReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(540, 465);
+            this.ClientSize = new System.Drawing.Size(870, 465);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label19);
@@ -415,6 +598,8 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -451,5 +636,20 @@
         private System.Windows.Forms.MaskedTextBox maskedtxb_Cpf;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lbl_Nome;
+        private System.Windows.Forms.Label lbl_NumReserva;
+        private System.Windows.Forms.Label lbl_DtCheckout;
+        private System.Windows.Forms.Label lbl_DtCheckin;
+        private System.Windows.Forms.Label lbl_CpfPassaporte;
+        private System.Windows.Forms.Label lbl_ValorTotal;
+        private System.Windows.Forms.Button btn_DarBaixa;
     }
 }
